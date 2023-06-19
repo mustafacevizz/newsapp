@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:paddingBottom="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="6dp">
+
+            <ImageView
+                android:id="@+id/image_view_add_news"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/not_available"
+                android:layout_height="250dp">
+
+            </ImageView>
+            <TextView
+                android:id="@+id/title_text_add_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Haber Başlığını Gir"
+                android:textSize="26dp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/url_text_add_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Url gir"
+                android:textSize="26dp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/text_detail_add_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Detaylar"
+                android:textSize="26dp">
+
+            </TextView>
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="133dp"
+                android:layout_marginTop="10dp"
+                android:onClick="addNewsClick"
+                android:text="Kaydet"
+                android:textSize="20dp">
+
+            </Button>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
