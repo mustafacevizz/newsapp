@@ -22,7 +22,7 @@ public class RequestManager {
 
     public void getNewsHeadlines(OnFetchDataListener listener, String category, String query){
         CallNewsApi callNewsApi= retrofit.create(CallNewsApi.class);
-        Call<NewsApiResponse> call=callNewsApi.callHeadlines("a","98420c8fd2f44bd48b4ce13bf33b638c");
+        Call<NewsApiResponse> call=callNewsApi.callHeadlines("us",category,"98420c8fd2f44bd48b4ce13bf33b638c");
         try {
             call.enqueue(new Callback<NewsApiResponse>() {
                 @Override
@@ -42,9 +42,9 @@ public class RequestManager {
             e.printStackTrace();
         }
     }
-    /*public void getPopularNewsHeadlines(OnFetchDataListener listener) {
+    public void getExploreHeadlines(OnFetchDataListener listener) {
         CallNewsApi callNewsApi = retrofit.create(CallNewsApi.class);
-        Call<NewsApiResponse> call = callNewsApi.callPopularHeadlines("us", "98420c8fd2f44bd48b4ce13bf33b638c");
+        Call<NewsApiResponse> call = callNewsApi.callExploreNews("a", "98420c8fd2f44bd48b4ce13bf33b638c");
         try {
             call.enqueue(new Callback<NewsApiResponse>() {
                 @Override
@@ -63,21 +63,24 @@ public class RequestManager {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }*/
+    }
     public RequestManager(Context context) {
         this.context = context;
     }
     public interface CallNewsApi{
-        @GET ("everything")
+        @GET ("top-headlines")
         Call<NewsApiResponse> callHeadlines(
+                @Query("country") String country,
+                @Query("category") String category,
+                //@Query("q") String query,
+                @Query("apiKey") String api_key);
+        @GET ("everything")
+        Call<NewsApiResponse> callExploreNews(
                 @Query("q") String domains,
                 //@Query("country") String country,
                 //@Query("category") String category,
                 //@Query("q") String query,
                 @Query("apiKey") String api_key);
-        /*@GET("top-headlines")
-        Call<NewsApiResponse> callPopularHeadlines(
-                @Query("country") String country*/
 
 
 

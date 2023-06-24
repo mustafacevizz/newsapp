@@ -14,6 +14,29 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_explore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="6dp"
+                android:onClick="exploreClick"
+                android:padding="6dp"
+                android:text="explore"
+                android:textColorLink="@color/blue"
+                android:textSize="12dp"></Button>
+
+            <Button
+                android:id="@+id/btn_trend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:onClick="trendClick"
+                android:padding="6dp"
+                android:text="trend"
+                android:textColorLink="@color/blue"
+                android:textSize="12dp"></Button>
             <Button
                 android:id="@+id/btn_1"
                 android:text="business"

@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
     RecyclerView recyclerView;
     CustomAdapter adapter;
     ProgressDialog dialog;
-    Button b1,b2,b3,b4,b5,b6,b7;
+    Button b1,b2,b3,b4,b5,b6,b7,btn_explore,btn_trend;
     SearchView searchView;
     private FirebaseAuth auth;
 
@@ -72,10 +72,7 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
         b7.setOnClickListener(this);
 
 
-
-
-        RequestManager manager = new RequestManager(this);
-        manager.getNewsHeadlines(listener,"general",null);
+        getExploreNews();
 
     }
     private final OnFetchDataListener<NewsApiResponse> listener=new OnFetchDataListener<NewsApiResponse>() {
@@ -118,5 +115,16 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
         dialog.show();
         RequestManager manager = new RequestManager(this);
         manager.getNewsHeadlines(listener,category,null);
+    }
+    public void exploreClick(View v){
+        getExploreNews();
+    }
+    public void getExploreNews(){
+        RequestManager manager = new RequestManager(this);
+        manager.getExploreHeadlines(listener);
+    }
+    public void trendClick(View v){
+        RequestManager manager = new RequestManager(this);
+        manager.getNewsHeadlines(listener,null,null);
     }
 }
