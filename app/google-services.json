@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "866693773784",
-    "project_id": "apinewsapp",
-    "storage_bucket": "apinewsapp.appspot.com"
+    "project_number": "878077528035",
+    "project_id": "apinewsapp-15744",
+    "storage_bucket": "apinewsapp-15744.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:866693773784:android:2943e4eb2f33a5ba8f1aad",
+        "mobilesdk_app_id": "1:878077528035:android:de5b444cb89b708a1682d6",
         "android_client_info": {
           "package_name": "com.mcvz.apinewsapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "866693773784-4qadq639qkrufeovpqmh1ginsbolaucl.apps.googleusercontent.com",
+          "client_id": "878077528035-c018b19s28avprc4is3ncnfss2as70k5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCqX64aIZyF8dmSz-vP5aqOFEbPnqeNrvQ"
+          "current_key": "AIzaSyBneVW4Jg7tWNPYxu1equNUZ5U3P_OKxp4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "866693773784-4qadq639qkrufeovpqmh1ginsbolaucl.apps.googleusercontent.com",
+              "client_id": "878077528035-c018b19s28avprc4is3ncnfss2as70k5.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

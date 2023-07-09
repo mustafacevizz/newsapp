@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
         searchView=findViewById(R.id.search_view);
         auth= FirebaseAuth.getInstance();
 
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
