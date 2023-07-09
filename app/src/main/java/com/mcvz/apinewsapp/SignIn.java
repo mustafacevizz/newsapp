@@ -2,6 +2,8 @@ package com.mcvz.apinewsapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +16,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.auth.User;
 import com.mcvz.apinewsapp.databinding.ActivitySignInBinding;
 
 public class SignIn extends AppCompatActivity {
@@ -46,6 +47,8 @@ public class SignIn extends AppCompatActivity {
                             User user = snapshot.child(edtPhone.getText().toString()).getValue(User.class);
                             if (user.getPassword().equals(edtPassword.getText().toString())) {
                                 Toast.makeText(SignIn.this, "Sign in successfully", Toast.LENGTH_SHORT).show();
+                                Intent signIn = new Intent(SignIn.this, MainActivity.class);
+                                startActivity(signIn);
                             } else {
                                 Toast.makeText(SignIn.this, "Sign in failed", Toast.LENGTH_SHORT).show();
                             }
